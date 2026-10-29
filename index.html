@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Al-capilot</title>
+    <style>
+      :root {
+        --bg: #0b1020;
+        --panel: #121a2b;
+        --panel-alt: #0f172a;
+        --border: #2a3a52;
+        --text: #e5eefb;
+        --muted: #a7b7d6;
+        --accent: #7dd3fc;
+        --accent-strong: #38bdf8;
+        --tag: #1c2c42;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(180deg, #0b1020 0%, #111827 100%);
+        color: var(--text);
+      }
+
+      .container {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 48px 20px 80px;
+      }
+
+      .hero {
+        padding: 32px 0 16px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: rgba(125, 211, 252, 0.08);
+        color: var(--accent);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      h1 {
+        font-size: clamp(2.4rem, 5vw, 4rem);
+        line-height: 1.1;
+        margin: 18px 0 16px;
+      }
+
+      .subtitle {
+        color: var(--muted);
+        font-size: 1.12rem;
+        line-height: 1.7;
+        max-width: 760px;
+      }
+
+      .projects {
+        margin-top: 52px;
+      }
+
+      .projects h2 {
+        font-size: 2rem;
+        margin-bottom: 22px;
+      }
+
+      .project-card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 24px 22px;
+        max-width: 680px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.35);
+      }
+
+      .project-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        margin-bottom: 14px;
+      }
+
+      .project-header h3 {
+        margin: 0;
+        font-size: clamp(1.3rem, 2vw, 1.8rem);
+      }
+
+      .project-tag {
+        background: var(--tag);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 6px 10px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--accent);
+      }
+
+      .project-card p {
+        margin: 0 0 18px;
+        color: #dfeafb;
+        line-height: 1.7;
+      }
+
+      .project-links {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .project-links a {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .project-links a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 640px) {
+        .project-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="hero">
+        <div class="eyebrow">Al-capilot</div>
+        <h1>AI-powered software and product work</h1>
+        <p class="subtitle">
+          Building tools, workflows, and systems for business automation, AI integrations,
+          and modern digital products.
+        </p>
+      </header>
+
+      <section class="projects" id="projects">
+        <h2>Projects</h2>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3>Render MCP Server</h3>
+            <span class="project-tag">Go</span>
+          </div>
+
+          <p>
+            The official Render MCP Server for interacting with Render resources via LLMs.
+          </p>
+
+          <div class="project-links">
+            <a href="https://github.com/render-oss/render-mcp-server" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+            <a href="https://render.com/docs/mcp-server" target="_blank" rel="noreferrer">
+              Docs
+            </a>
+          </div>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>
